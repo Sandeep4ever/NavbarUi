@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import styled from 'styled-components';
+import Navbar from './Components/Navbar';
+import Popup from './Components/Popup';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <MainContainer>
+    <Container>
+     <Navbar/>
+   <PopCenter>
+     <Popup/>
+     </PopCenter>
+
+    </Container>
+      
+    </MainContainer>
+    </>
+
+  )
 }
 
-export default App;
+export default App
+ 
+const MainContainer =styled.div`
+/* width: 100vw;
+height: 100vh; */
+display:flex;
+justify-content: center;
+background-color: skyblue;
+
+`
+const Container =styled.div`
+width: 1366px;
+height: 768px;
+background-color: #ffffff;
+overflow-x: hidden;
+
+`
+const PopCenter =styled.div`
+width: 1366px;
+height:706px;
+display:flex;
+align-items: center;
+justify-content: center;
+
+`
