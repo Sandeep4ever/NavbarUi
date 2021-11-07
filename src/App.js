@@ -1,17 +1,20 @@
 // import './App.css';
 import styled from 'styled-components';
 import Navbar from './Components/Navbar';
-import Popup from './Components/Popup';
-
+import Assignto from './Components/Assignto';
 const App = () => {
   return (
     <>
     <MainContainer>
     <Container>
      <Navbar/>
-   <PopCenter>
-     <Popup/>
-     </PopCenter>
+    
+       <Assignto/>
+      
+
+     
+
+   
 
     </Container>
       
@@ -36,13 +39,10 @@ width: 1366px;
 height: 768px;
 background-color: #ffffff;
 overflow-x: hidden;
+overflow-y: hidden;
 
 `
-const PopCenter =styled.div`
-width: 1366px;
-height:706px;
-display:flex;
-align-items: center;
-justify-content: center;
+// const DisableBc =styled.div`
 
-`
+// `
+

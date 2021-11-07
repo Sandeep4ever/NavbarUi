@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Popup = () => {
+const Popup = ({onhandleClose}) => {
+  // const [close, setClose] = useState(true)
+
+  // const Closedata =()=>{
+  //  setClose(!close)
+  // }
+
   return (
     <>
+     
       <PopupContainer>
         <Crossbtn>
         
-          <img src="./images/close.svg" alt="" />
+          <img onClick={onhandleClose} src="./images/close.svg" alt="" />
         </Crossbtn>
         <Team>
           Assign to team member
         </Team>
         <Selector>
-        <form >
+    <form >
   <label for="member">Select member</label>
    <br />
   <select name="team" id="cars">
@@ -30,9 +37,10 @@ const Popup = () => {
         </Selector>
 
       </PopupContainer>
+    
     </>
-  )
-}
+  ) 
+  }
 
 export default Popup
 
